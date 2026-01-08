@@ -43,8 +43,13 @@ function test2() {
     return value + value;
 }
 
+test1();
+let result = test2();
+
+
 function printMessage() {
     for (var i = 1; i <= 5; i++) {
+        var j = i;
         console.log("JavaScript is super cool!!!");
     }
 

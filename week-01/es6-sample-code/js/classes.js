@@ -11,7 +11,7 @@ class Person
     age;
     address;
     gender;
-    emergencyContact;
+    #emergencyContact;
 
     // A constructor is a special type of method that is
     // used to create an object and/or intialize the object with default values

@@ -1,5 +1,5 @@
 // Import modules
-import movies from "./arrays.js";
+import { movies } from "./arrays.js";
 
 console.log(`The size of the movies array is ${movies.length}`);
 
