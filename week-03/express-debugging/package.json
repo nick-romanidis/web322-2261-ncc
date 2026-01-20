@@ -1,0 +1,20 @@
+{
+  "name": "ex4-express",
+  "version": "1.0.0",
+  "description": "This is an express server example.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "web322",
+    "express",
+    "nodejs",
+    "javascript"
+  ],
+  "author": "Nick Romanidis",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
