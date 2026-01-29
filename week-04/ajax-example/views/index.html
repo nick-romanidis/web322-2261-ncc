@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>AJAX DEMO</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function getAllUsers() {
+            fetch("/api/users", {
+                method: "GET"
+            })
+                .then(response => {
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                    document.getElementById("textMessage").innerText = data.message;
+                    document.getElementById("htmlMessage").innerHTML = data.messageHtml;
+                });
+        }
+
+        function getOneUser(userId) {
+            fetch("/api/users/" + userId, {
+                method: "GET"
+            })
+                .then(response => {
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                    document.getElementById("textMessage").innerText = data.message;
+                    document.getElementById("htmlMessage").innerHTML = data.messageHtml;
+                });
+        }
+    </script>
+    <h1>AJAX DEMO</h1>
+
+    <h2>Text Message</h2>
+    <p id="textMessage">Nothing happened yet.</p>
+
+    <h2>HTML Message</h2>
+    <p id="htmlMessage">Nothing happened yet.</p>
+
+    <h2>Actions</h2>
+    <button type="button" onclick="getAllUsers()">All Users</button>
+    <button type="button" onclick="getOneUser(99)">One User</button>
+</body>
+
+</html>
